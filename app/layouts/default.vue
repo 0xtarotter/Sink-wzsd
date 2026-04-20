@@ -2,7 +2,7 @@
 import { Menu, X } from 'lucide-vue-next'
 
 const showMenu = ref(false)
-const { title } = useAppConfig() // 移除了 github, telegram, twitter 的引用
+// 移除了 useAppConfig，直接在模板中使用硬编码的 "IURL"
 </script>
 
 <template>
@@ -27,20 +27,11 @@ const { title } = useAppConfig() // 移除了 github, telegram, twitter 的引�
             >
               <NuxtLink
                 to="/"
-                :title="title"
+                title="IURL"
                 aria-label="home"
                 class="flex items-center space-x-2"
               >
-                <span
-                  class="flex size-8 items-center justify-center rounded-full"
-                >
-                  <img
-                    src="/sink.png"
-                    :alt="`${title} Logo`"
-                    class="size-full rounded-full"
-                  >
-                </span>
-                <span class="text-xl font-black">{{ title }}</span>
+                <span class="text-xl font-black">IURL</span>
               </NuxtLink>
 
               <button
@@ -118,30 +109,20 @@ const { title } = useAppConfig() // 移除了 github, telegram, twitter 的引�
           >
             <NuxtLink
               to="/"
-              :title="title"
+              title="IURL"
               aria-label="home"
               class="block size-fit"
             >
               <div class="flex items-center space-x-2">
-                <span
-                  class="flex size-8 items-center justify-center rounded-full"
-                >
-                  <img
-                    src="/sink.png"
-                    :alt="`${title} Logo`"
-                    class="size-full rounded-full"
-                  >
-                </span>
-                <span class="text-xl font-black">{{ title }}</span>
+                <span class="text-xl font-black">IURL</span>
               </div>
             </NuxtLink>
 
             <small class="block text-center text-sm text-muted-foreground">
-              &copy; {{ new Date().getFullYear() }} {{ title }}
+              &copy; {{ new Date().getFullYear() }} IURL
             </small>
           </div>
-
-          </div>
+        </div>
       </div>
     </footer>
   </div>
