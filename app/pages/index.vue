@@ -51,8 +51,8 @@
 </template>
 
 <script setup lang="ts">
-const countdown = ref(3)
-const totalTime = 3
+const countdown = ref(10)
+const totalTime = 10
 const targetUrl = 'https://tarotter.com'
 
 // 计算圆环进度条的偏移量 (283 是周长近似值)
