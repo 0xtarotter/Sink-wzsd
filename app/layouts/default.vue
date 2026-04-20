@@ -42,13 +42,21 @@ const goMain = () => {
 }
 </script>
 
-<style scoped>
-/* subtle gradient glow */
-div::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
-  z-index: -1;
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const goDashboard = () => {
+  window.location.href = '/dashboard'
 }
-</style>
+
+const goMain = () => {
+  window.location.href = 'https://tarotter.com'
+}
+
+// ✅ 只在首页才执行（如果你有自动逻辑的话）
+if (route.path !== '/') {
+  // 非首页，不做任何事（避免影响 dashboard）
+}
+</script>
