@@ -33,7 +33,7 @@
 
       <div class="space-y-2">
         <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-          正在前往 <span class="text-primary">Tarotter</span>
+          正在 <span class="text-primary">跳转</span>
         </h1>
         <p class="text-muted-foreground">
           即将为您开启全新体验，请稍候...
@@ -51,8 +51,14 @@
 </template>
 
 <script setup lang="ts">
-const countdown = ref(10)
-const totalTime = 10
+// 1. 设置页面标题 (回答你上一个关于标题的问题)
+useHead({
+  title: 'IURL.CC - 正在重定向'
+})
+
+<script setup lang="ts">
+const countdown = ref(15)
+const totalTime = 15
 const targetUrl = 'https://tarotter.com'
 
 // 计算圆环进度条的偏移量 (283 是周长近似值)
