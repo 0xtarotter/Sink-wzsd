@@ -33,10 +33,10 @@
 
       <div class="space-y-2">
         <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-          正在前往 <span class="text-primary">Tarotter</span>
+          正在 - <span class="text-primary">重定向</span>
         </h1>
         <p class="text-muted-foreground">
-          即将为您开启全新体验，请稍候...
+         请稍候...
         </p>
       </div>
 
@@ -53,7 +53,7 @@
 <script setup lang="ts">
 // 1. 设置页面标题 (回答你上一个关于标题的问题)
 useHead({
-  title: 'IURL - 正在重定向'
+  title: 'IURL.CC'
 })
 
 // 2. 定义倒计时变量 (修改这里可以调整秒数)
