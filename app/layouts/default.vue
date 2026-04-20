@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import NumberFlow from '@number-flow/vue'
-import { Menu, Star, X } from 'lucide-vue-next'
-import { GitHubIcon, TelegramIcon, XIcon } from 'vue3-simple-icons'
-
-const showMenu = ref(false)
-const { title, telegram, twitter, github } = useAppConfig()
-const { rawStats } = useGithubStats()
-</script>
-
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-black text-white">
     <div class="text-center space-y-6 px-6">
@@ -62,4 +52,3 @@ div::before {
   z-index: -1;
 }
 </style>
-
