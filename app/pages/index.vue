@@ -33,7 +33,7 @@
 
       <div class="space-y-2">
         <h1 class="text-2xl font-bold tracking-tight sm:text-3xl">
-          正在 <span class="text-primary">跳转</span>
+          正在前往 <span class="text-primary">Tarotter</span>
         </h1>
         <p class="text-muted-foreground">
           即将为您开启全新体验，请稍候...
@@ -53,19 +53,20 @@
 <script setup lang="ts">
 // 1. 设置页面标题 (回答你上一个关于标题的问题)
 useHead({
-  title: 'IURL.CC - 正在重定向'
+  title: 'IURL - 正在重定向'
 })
 
-<script setup lang="ts">
-const countdown = ref(15)
-const totalTime = 15
+// 2. 定义倒计时变量 (修改这里可以调整秒数)
+const countdown = ref(18) // 初始显示的数字
+const totalTime = 18      // 总时长，用于圆环进度计算
 const targetUrl = 'https://tarotter.com'
 
-// 计算圆环进度条的偏移量 (283 是周长近似值)
+// 3. 计算圆环进度条的偏移量
 const dashOffset = computed(() => {
   return 283 * (1 - countdown.value / totalTime)
 })
 
+// 4. 落地执行倒计时逻辑
 onMounted(() => {
   const timer = setInterval(() => {
     if (countdown.value > 1) {
@@ -80,7 +81,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* 简单的入场动画 */
+/* 入场动画：让内容稍微往上浮动出现 */
 .relative {
   animation: fadeIn 0.8s ease-out;
 }
