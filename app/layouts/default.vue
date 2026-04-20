@@ -27,11 +27,11 @@ const showMenu = ref(false)
             >
               <NuxtLink
                 to="/"
-                title="IURL"
+                title="IURL.CC"
                 aria-label="home"
                 class="flex items-center space-x-2"
               >
-                <span class="text-xl font-black">IURL</span>
+                <span class="text-xl font-black">IURL.CC</span>
               </NuxtLink>
 
               <button
@@ -114,12 +114,12 @@ const showMenu = ref(false)
               class="block size-fit"
             >
               <div class="flex items-center space-x-2">
-                <span class="text-xl font-black">IURL</span>
+                <span class="text-xl font-black">IURL.CC</span>
               </div>
             </NuxtLink>
 
             <small class="block text-center text-sm text-muted-foreground">
-              &copy; {{ new Date().getFullYear() }} IURL
+              &copy; {{ new Date().getFullYear() }} 
             </small>
           </div>
         </div>
